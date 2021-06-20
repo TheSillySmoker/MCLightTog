@@ -1,6 +1,6 @@
 import socket
 
-TCP_IP = '192.168.1.29' # this IP of my pc. When I want raspberry pi 2`s as a server, I replace it with its IP '169.254.54.195'
+TCP_IP = '192.168.1.19' # this IP of my pc. When I want raspberry pi 2`s as a server, I replace it with its IP '169.254.54.195'
 TCP_PORT = 5005
 BUFFER_SIZE = 20 # Normally 1024, but I want fast response
 while 1:
@@ -16,7 +16,7 @@ while 1:
         if not data: break
         print ("received data:", data)
         conn.send(data)  # echo
-        print(str(data[:1]))
+        print(str(data[1:]))
     conn.close()
 
     
