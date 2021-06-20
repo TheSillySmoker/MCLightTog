@@ -1,6 +1,7 @@
 import socket
 
-TCP_IP = '192.168.1.19' # this IP of my pc. When I want raspberry pi 2`s as a client, I replace it with its IP '169.254$TCP_PORT = 5005
+
+TCP_IP = '192.168.1.29' # this IP of my pc. When I want raspberry pi 2`s as a client, I replace it with its IP '169.254.54.195'
 TCP_PORT = 5005
 BUFFER_SIZE = 1024
 MESSAGE = "Hello, World!"
