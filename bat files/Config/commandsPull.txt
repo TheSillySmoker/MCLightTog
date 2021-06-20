@@ -1,0 +1,2 @@
+cd /home/mark/Desktop/MCLightTog
+sudo git pull
