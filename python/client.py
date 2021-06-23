@@ -1,19 +1,7 @@
 import socket
 
-
-TCP_IP = '192.168.1.19' # this IP of my pc. When I want raspberry pi 2`s as a client, I replace it with its IP '169.254.54.195'
-TCP_PORT = 50002
-BUFFER_SIZE = 1024
-
-
-    
-MESSAGE = 'test'
-
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect((TCP_IP, TCP_PORT))
-s.send(MESSAGE)
-data = s.recv(BUFFER_SIZE)
-s.close()
+s.connect((socket.gethostname(), 1234))
 
-print ("received data:", data)
-
+msg = s.recv(1024)
+print(msg.decode("utf-8"))
