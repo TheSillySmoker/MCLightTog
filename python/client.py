@@ -15,5 +15,7 @@ while 1:
     print(msg.decode("utf-8"))
     if (decMsg == "On"):
         GPIO.output(ledPin, GPIO.HIGH)
+        s.connect(("192.168.1.29", 1234))
     if (decMsg == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
+        s.connect(("192.168.1.29", 1234))
