@@ -18,5 +18,4 @@ while 1:
         GPIO.output(ledPin, GPIO.HIGH)
     if (msg.decode("utf-8") == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
-    print("clean up") 
 
