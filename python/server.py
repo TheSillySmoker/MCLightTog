@@ -10,10 +10,9 @@ while True:
     while 1:
         try:
              clientsocket.send(bytes(input("Please enter a message: "), "utf-8"))
-            
-            
         except: 
             print(f"{address}has left the server")
             clientsocket, address = s.accept()
+
         
        
