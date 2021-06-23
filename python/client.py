@@ -19,4 +19,4 @@ while 1:
     if (msg.decode("utf-8") == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
     print("clean up") 
-    GPIO.cleanup() # cleanup all GPIO 
+
