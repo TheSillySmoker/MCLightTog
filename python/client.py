@@ -20,9 +20,9 @@ while 1:
     if(msg.decode("utf-8") == "Flash"):
         x = 0
         while x < 10:
-            GPIO.output(ledPin, GPIO.HIGH)
+            GPIO.output(ledPin, GPIO.toggle)
             time.sleep(0.2)
-            GPIO.output(ledPin, GPIO.LOW)
+            GPIO.output(ledPin, GPIO.toggle)
             time.sleep(0.2)
             x += 1
             print(x)
