@@ -1,7 +1,7 @@
 import socket
 import RPi.GPIO as GPIO
 import time
-
+print("gg")
 ledPin = 16
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
