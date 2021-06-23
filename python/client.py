@@ -1,12 +1,11 @@
 import socket
 import RPi.GPIO as GPIO
 import time
+
 GPIO.setwarnings(False)   
 ledPin = 16
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
-
-print("gg")
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(("192.168.1.29", 1234))
