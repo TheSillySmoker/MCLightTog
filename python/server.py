@@ -8,4 +8,12 @@ while True:
     clientsocket, address = s.accept()
     print(f"Connection from {address} has been established!")
     while 1:
-        clientsocket.send(bytes(input("Please enter a message: "), "utf-8"))
+        try:
+             clientsocket.send(bytes(input("Please enter a message: "), "utf-8"))
+             msg = s.recv(1024)
+             print(msg.decode("utf-8"))
+        except: 
+            print(f"{address}has left the server")
+            clientsocket, address = s.accept()
+        
+       
