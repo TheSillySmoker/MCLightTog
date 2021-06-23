@@ -13,12 +13,11 @@ s.connect(("192.168.1.29", 1234))
 while 1:
     msg = s.recv(1024)
     print(msg.decode("utf-8")) 
-    decMsg = msg.decode("uft-8")
-    if (decMsg == "On"):
+    if (msg.decode("utf-8") == "On"):
         GPIO.output(ledPin, GPIO.HIGH)
-    if (decMsg == "Off"):
+    if (msg.decode("utf-8") == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
-    if(decMsg == "Flash"):
+    if(msg.decode("utf-8") == "Flash"):
         x = 0
         while x < 10:
             GPIO.output(ledPin, GPIO.HIGH)
