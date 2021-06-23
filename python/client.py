@@ -19,11 +19,13 @@ while 1:
     if (decMsg == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
     if(decMsg == "Flash"):
-        i = 0
-        while i < 10:
+        x = 0
+        while x < 10:
             GPIO.output(ledPin, GPIO.HIGH)
             time.sleep(0.5)
             GPIO.output(ledPin, GPIO.LOW)
             time.sleep(0.5)
-            i = i + 1
+            x += 1
+            print(x)
+        
 
