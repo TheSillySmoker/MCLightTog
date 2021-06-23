@@ -2,7 +2,7 @@ import socket
 import RPi.GPIO as GPIO
 import time
 
-ledPin = 21
+ledPin = 16
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
 
@@ -15,7 +15,6 @@ while 1:
     print(msg.decode("utf-8"))
     if (decMsg == "On"):
         GPIO.output(ledPin, GPIO.HIGH)
-        s.connect(("192.168.1.29", 1234))
     if (decMsg == "Off"):
         GPIO.output(ledPin, GPIO.LOW)
-        s.connect(("192.168.1.29", 1234))
+
