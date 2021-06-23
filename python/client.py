@@ -21,9 +21,9 @@ while 1:
         x = 0
         while x < 10:
             GPIO.output(ledPin, GPIO.HIGH)
-            time.sleep(0.5)
+            time.sleep(0.2)
             GPIO.output(ledPin, GPIO.LOW)
-            time.sleep(0.5)
+            time.sleep(0.2)
             x += 1
             print(x)
         
